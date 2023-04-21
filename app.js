@@ -1,14 +1,16 @@
-const http = require('http');
+// main module
 
-const hostname = '127.0.0.1';
-const port = 3000;
+// function sayHello(name) {
+//  console.log('Hello ' + name);
+//}
+// sayHello('Kathy');
 
-const server = http.createServer((req, res) => {
-  res.statusCode = 200;
-  res.setHeader('Content-Type', 'text/plain');
-  res.end('Hello World');
-});
+const log = require('./logger');
 
-server.listen(port, hostname, () => {
-  console.log(`Server running at http://${hostname}:${port}/`);
-});
+// console.log(logger);
+log('message');
+
+// const path = require('node:path');
+const path = require('path');
+var pathObj = path.parse(__filename);
+console.log(pathObj);
